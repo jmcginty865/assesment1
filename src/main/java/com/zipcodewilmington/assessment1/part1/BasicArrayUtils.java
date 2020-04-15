@@ -9,7 +9,20 @@ public class BasicArrayUtils {
      * @return the first element in the array
      */
     public static String getFirstElement(String[] stringArray) {
-        return null;
+        String answer = "";
+
+            for (int i = 0; i <= stringArray.length; i++){
+                String[] holder = new String [stringArray.length];
+
+                holder [i] += stringArray[i] + " ";
+
+                if(holder[i] != " "){
+                    answer += holder[i];
+                    break;
+                }
+
+            }
+        return answer;
     }
 
     /**
@@ -25,7 +38,17 @@ public class BasicArrayUtils {
      * @return the last element in the array
      */
     public static String getLastElement(String[] stringArray) {
-        return null;
+        String answer = "";
+
+        int i = stringArray.length -1;
+
+        while(stringArray[i] != ","){
+
+            answer += stringArray[i];
+
+            break;
+        }
+        return answer;
     }
 
     /**
