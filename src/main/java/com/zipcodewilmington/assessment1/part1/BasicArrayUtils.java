@@ -10,18 +10,7 @@ public class BasicArrayUtils {
      */
     public static String getFirstElement(String[] stringArray) {
         String answer = "";
-
-            for (int i = 0; i <= stringArray.length; i++){
-                String[] holder = new String [stringArray.length];
-
-                holder [i] += stringArray[i] + " ";
-
-                if(holder[i] != " "){
-                    answer += holder[i];
-                    break;
-                }
-
-            }
+        answer = stringArray[0];
         return answer;
     }
 
@@ -30,7 +19,8 @@ public class BasicArrayUtils {
      * @return the second element in the array
      */
     public static String getSecondElement(String[] stringArray) {
-        return null;
+
+        return stringArray[1];
     }
 
     /**
@@ -38,17 +28,8 @@ public class BasicArrayUtils {
      * @return the last element in the array
      */
     public static String getLastElement(String[] stringArray) {
-        String answer = "";
 
-        int i = stringArray.length -1;
-
-        while(stringArray[i] != ","){
-
-            answer += stringArray[i];
-
-            break;
-        }
-        return answer;
+        return stringArray[stringArray.length-1];
     }
 
     /**
@@ -56,6 +37,6 @@ public class BasicArrayUtils {
      * @return the second to last element in the array
      */
     public static String getSecondToLastElement(String[] stringArray) {
-        return null;
+        return stringArray[stringArray.length-2];
     }
 }
